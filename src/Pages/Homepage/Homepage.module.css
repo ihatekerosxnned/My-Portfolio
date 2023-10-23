@@ -1,0 +1,99 @@
+/* 
+FONT SIZES
+TITLE 3vw H1 
+SUBTITLE 1.5vw H2
+BODY 0.9vw p
+ */
+
+
+/* ABOUT */
+.all_container{
+    padding: 10% 15%;
+    width: 100%;
+    min-height: 30vh;
+}
+.all_container h2{
+    font-size: 1.5vw;
+    margin-bottom: 2%;
+}
+.all_container p{
+    font-size: 0.9vw;
+    color: #f2f2f2;
+    padding-right: 20%;
+    line-height: 1.5;
+}
+.skills_container{
+    display: flex;
+}
+/* CARD CSS */
+.card_container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.5% 0;
+}
+.card{
+    height: 30vh;
+    background-color: #10637d;
+    flex: 1;
+    margin: 5px;
+}
+
+/* FORMS */
+.form_group{
+    width:100%;
+}
+.form_group input{
+    width:99%;
+    height: 50px;
+    margin: 10px .5%;
+    border-radius: 5px;
+    border: none;
+    background-color: #1C2025;
+}
+.form_group textarea{
+    width:99%;
+    height: 250px;
+    margin: 10px .5%;
+    border-radius: 5px;
+    border: none;
+    resize: none;
+    background-color: #1C2025;
+}
+.form_group textarea::placeholder{
+    font-size: 1vw;
+    padding: 0.5vw;
+    color: #f2f2f2;
+}
+.form_group input::placeholder{
+    font-size: 1vw;
+    padding: 0.5vw;
+    color: #f2f2f2;
+}
+.form_group_flex{
+    display: flex;
+    justify-content: space-between;
+}
+.form_group_flex input{
+    width: 49%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    margin-inline: auto;
+    background-color: #1C2025;
+}
+.btn_form{
+    padding: 8px 16px;
+    text-transform: uppercase;
+    font-size: 0.9vw;
+    font-weight: bold;
+    width: 10vw;
+    margin: 1% 0.5%;
+    color: #27282f;
+    background-color: #10f0fc;
+    border: none;
+    transition: 0.5s linear;
+}
+.btn_form:hover{
+    background-color: #10637d;
+    color: #f2f2f2;
+}

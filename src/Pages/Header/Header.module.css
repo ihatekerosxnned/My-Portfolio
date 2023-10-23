@@ -1,0 +1,54 @@
+header{
+    height: 80vh; 
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 8% 15%;
+  width: 100%;
+  height: 100vh;
+}
+/* LEFT DESIGN */
+.left {
+  width: 60%;
+  height: 55vh;
+  padding: 10% 0;
+}
+.left h1{
+    font-size: 3vw;
+    color: #f2f2f2;
+    margin-bottom: 2%;
+}
+.left h2{
+    font-size: 1.5vw;
+    margin-bottom: 2%;
+}
+.left p{
+    font-size: 0.9vw;
+    color: #f2f2f2;
+    line-height: 1.5;
+}
+/* RIGHT DESIGN */
+.right {
+  width: 40%;
+}
+.blob {
+  width: 100%;
+}
+/* button */
+.btn{
+    padding: 8px 16px;
+    text-transform: uppercase;
+    font-size: 0.9vw;
+    font-weight: bold;
+    width: 10vw;
+    margin: 5% 0;
+    color: #27282f;
+    background-color: #10f0fc;
+    border: none;
+    transition: 0.5s linear;
+}
+.btn:hover{
+    background-color: #10637d;
+    color: #f2f2f2;
+}
