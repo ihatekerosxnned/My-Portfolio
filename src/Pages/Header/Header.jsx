@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import styles from "./Header.module.css";
 import banner from "../../assets/Images/Banner1.png";
 
-import {animate } from "motion";
+import { animate, stagger } from "motion"
 
 const Header = () =>{
     useEffect(()=>{
@@ -13,21 +13,40 @@ const Header = () =>{
               duration: 10,
               offset: [0, 0.25, 0.75]
             }
+          ),
+          animate(
+            "#text",
+            { y:[300, 0], opacity:[0, 1] },
+            {
+              delay: stagger(0.5),
+              duration: 1.7,
+              easing: [.22, .03, .26, 1]
+            }
+          ),
+          animate(
+            "#button",
+            { opacity:[0, 1] },
+            {
+              delay: 2,
+              duration: 3,
+              easing: [.22, .03, .26, 1]
+            }
           )
+
     },[])
     return(
         <>
         <header>
         <div className={styles.container}>
           <div className={styles.left}>
-            <h1>Felipe Junnie Buenaflor</h1>
-            <h2>Explore My World of Code and Creativity</h2>
-            <p>
+            <h1 id="text">Felipe Junnie Buenaflor</h1>
+            <h2 id="text">Explore My World of Code and Creativity</h2>
+            <p id="text">
               Discover my projects, delve into my coding journey, and witness
               the fusion of technology and creativity. Welcome to my digital
               playground!
             </p>
-            <button className={styles.btn}>See More</button>
+            <button className={styles.btn} id="button">See More</button>
           </div>
           <div className={styles.right}>
             <div className={styles.blob} id="blob">

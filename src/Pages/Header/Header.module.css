@@ -4,9 +4,10 @@ header{
 .container {
   display: flex;
   justify-content: space-between;
-  padding: 8% 15%;
-  width: 100%;
+  padding: 8% 0;
+  width: 80%;
   height: 100vh;
+  margin: auto;
 }
 /* LEFT DESIGN */
 .left {

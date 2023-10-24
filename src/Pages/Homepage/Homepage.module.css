@@ -8,9 +8,10 @@ BODY 0.9vw p
 
 /* ABOUT */
 .all_container{
-    padding: 10% 15%;
-    width: 100%;
+    padding: 2.5% 0;
+    width: 80%;
     min-height: 30vh;
+    margin: 10% auto;
 }
 .all_container h2{
     font-size: 1.5vw;
@@ -25,6 +26,22 @@ BODY 0.9vw p
 .skills_container{
     display: flex;
 }
+/* ICONS */
+.icons_container{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin: 5% 0;
+}
+.icons{
+    width: 45px;
+    height: 45px;
+}
+.icons img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 /* CARD CSS */
 .card_container{
     display: flex;
@@ -32,10 +49,31 @@ BODY 0.9vw p
     padding: 2.5% 0;
 }
 .card{
-    height: 30vh;
-    background-color: #10637d;
-    flex: 1;
+    width: 32%;
+    min-width: 30%;
+    background-color: #1c2025;
     margin: 5px;
+}
+
+/* CARD CSS CARD */
+.card_image{
+    width: 100%;
+    height: 300px;
+}
+.card_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card_title{
+    padding: 2%;
+}
+.card_title h3{
+    font-size: 1.3vw;
+    color: #10637d;
+}
+.card_title p{
+    font-size: 0.9vw;
 }
 
 /* FORMS */
