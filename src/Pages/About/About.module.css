@@ -1,0 +1,80 @@
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+}
+.content {
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 12.5% 0;
+}
+.content h4 {
+  margin-bottom: 1rem;
+  color: #ccc;
+  font-size: 1vw;
+  font-weight: 50;
+}
+.content h1 {
+  margin-bottom: 1rem;
+  font-size: 3vw;
+  font-weight: 700;
+  line-height: 4rem;
+  color: #10637D;
+}
+.content p{
+  margin-bottom: 2rem;
+}
+.content h1 span {
+  color: #01546e;
+}
+.image {
+  width: 150%;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 50px #01546e);
+}
+.image img{
+  width: 100%;
+  object-fit: contain;
+}
+.blob {
+  width: 100%;
+}
+/* Blur Effect */
+.blur {
+  position: absolute;
+  box-shadow: 0 0 1000px 75px #01546e;
+  z-index: -1;
+  margin: 5% 0;
+  filter: blur(35px);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack elements vertically */
+  
+  }
+  .content h1 {
+    font-size: 2rem; /* Adjusted font-size for smaller screens */
+    line-height: 2rem; /* Adjusted line-height for smaller screens */
+    text-align: center;
+  }
+  .content p{
+    font-size: 1rem;
+    text-align: center;
+    line-height: 2;
+  }
+  .content{
+    padding: 0;
+  }
+
+  .image {
+    width: 85%;
+    margin: auto;/* Adjusted the width value for smaller screens */
+  }
+
+  .blur {
+    margin: 10% 0; /* Adjusted the margin for smaller screens */
+  }
+}

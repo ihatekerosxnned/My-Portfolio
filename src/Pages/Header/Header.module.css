@@ -1,55 +1,66 @@
-header{
-    height: 80vh; 
-}
 .container {
-  display: flex;
-  justify-content: space-between;
-  padding: 8% 0;
   width: 80%;
-  height: 100vh;
   margin: auto;
+  display: flex;
 }
-/* LEFT DESIGN */
-.left {
-  width: 60%;
-  height: 55vh;
-  padding: 10% 0;
+.content {
+  width: auto;
+  padding: 5% 0;
 }
-.left h1{
-    font-size: 3vw;
-    color: #f2f2f2;
-    margin-bottom: 2%;
+.content h4 {
+  margin-bottom: 1rem;
+  font-weight: 300;
 }
-.left h2{
-    font-size: 1.5vw;
-    margin-bottom: 2%;
+.content h1 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  display: flex;
 }
-.left p{
-    font-size: 0.9vw;
-    color: #f2f2f2;
-    line-height: 1.5;
+.content p {
+  margin-bottom: 1.5rem;
 }
-/* RIGHT DESIGN */
-.right {
-  width: 40%;
+.content h1 span {
+  color: #01546e;
+}
+.image {
+  width: 100%;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 100px #01546e);
+}
+
+.image img {
+  width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .content {
+    text-align: center;
+  }
+  .content h1 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+  .content h1 span{
+    text-align: center;
+  }
+
+  .image {
+    order: -1;
+  }
 }
 .blob {
   width: 100%;
 }
-/* button */
-.btn{
-    padding: 8px 16px;
-    text-transform: uppercase;
-    font-size: 0.9vw;
-    font-weight: bold;
-    width: 10vw;
-    margin: 5% 0;
-    color: #27282f;
-    background-color: #10f0fc;
-    border: none;
-    transition: 0.5s linear;
-}
-.btn:hover{
-    background-color: #10637d;
-    color: #f2f2f2;
+/* Blur Effect */
+.blur {
+  position: absolute;
+  box-shadow: 0 0 1000px 75px #01546e;
+  z-index: -1;
+  margin: 5% 0;
+  filter: blur(35px);
 }
