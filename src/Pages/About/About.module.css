@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   text-align: left;
-  padding: 12.5% 0;
+  padding: 7.5% 0;
 }
 .content h4 {
   margin-bottom: 1rem;
@@ -48,6 +48,20 @@
   z-index: -1;
   margin: 5% 0;
   filter: blur(35px);
+}
+
+.icons_container{
+  display: flex;
+}
+.icons_container img{
+  height: 50px;
+  margin-right: 50px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.icons_bg{
+  filter: drop-shadow(0 2px 15px #01546e);
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,93 @@
+article{
+  background: #27282F;
+  border-top: 2px solid #01546e;
+  border-bottom: 2px solid #01546e;
+}
+.container{
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10% 0;
+}
+.container h1{
+  margin-bottom: 1rem;
+  font-size: 3vw;
+  font-weight: 700;
+  line-height: 4rem;
+  color: #10637D;
+  width: 100%;
+}
+
+/* Slider css ambot nalang gid gaka stress nako */
+.portfolio ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul h1 {
+  font-size: 5rem;
+}
+section.portfolio {
+  height: 500vh;
+  position: relative;
+}
+
+ul.ul_list {
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+.ul_list li {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.content h1 {
+  margin-bottom: 1rem;
+  font-size: 3vw;
+  font-weight: 700;
+  line-height: 4rem;
+  color: #10637D
+}
+.content p{
+  margin-bottom: 2rem;
+  width: 65%;
+  text-align: center;
+}
+.ul_list li h2 {
+  margin: 0;
+  color: #f2f2f2;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1.2;
+  position: relative;
+  text-transform: uppercase;
+  bottom: 50px;
+  display: inline-block;
+}
+/* CAARD DESIGN */
+.card{
+  display: flex;
+  width: 85%;
+  height: 85%;
+  text-align: left;
+  border-radius: 25px;
+  
+}
+.card img{
+  width: 100%;
+  object-fit: contain;
+  filter: brightness(100%);
+  transition: filter 0.3s;
+}
+.card img:hover{
+  filter: brightness(50%);  
+}

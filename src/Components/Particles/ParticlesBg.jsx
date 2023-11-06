@@ -22,7 +22,7 @@ function ParticlesBG() {
         },
         fpsLimit: 60,
         interactivity: {
-          detectsOn: "canvas",
+          detectsOn: "window",
           events: {
             onClick: {
               enable: true,
@@ -31,6 +31,11 @@ function ParticlesBG() {
             onHover: {
               enable: true,
               mode: "repulse",
+              parallax: {
+                "enable": false,
+                "force": 2,
+                "smooth": 10
+              }
             },
             resize: true,
           },
@@ -45,7 +50,7 @@ function ParticlesBG() {
               quantity: 4,
             },
             repulse: {
-              distance: 200,
+              distance: 100,
               duration: 0.4,
             },
           },
@@ -69,7 +74,7 @@ function ParticlesBG() {
             enable: true,
             outMode: "bounce",
             random: true,
-            speed: 10,
+            speed: 4,
             straight: false,
           },
           number: {
@@ -77,10 +82,10 @@ function ParticlesBG() {
               enable: true,
               value_area:900,
             },
-            value: 80,
+            value: 100,
           },
           opacity: {
-            value: 0.25,
+            value: 0.15,
           },
           shape: {
             type: "circle",

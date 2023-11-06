@@ -1,0 +1,65 @@
+.container {
+    width: 80%;
+    margin: auto;
+  }
+  .content {
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 7.5% 0;
+    margin: auto;
+  }
+  .content h1 {
+    margin-bottom: 1rem;
+    font-size: 3vw;
+    font-weight: 700;
+    line-height: 4rem;
+    color: #10637D;
+  }
+  .content p{
+    margin-bottom: 2rem;
+  }
+  .blur {
+    position: absolute;
+    box-shadow: 0 0 1000px 75px #01546e;
+    z-index: -1;
+    margin: 5% 0;
+    filter: blur(35px);
+  } 
+  .icons_bg{
+    filter: drop-shadow(0 2px 15px #01546e);
+  }
+  
+
+/* PROJECT CARDS */
+
+.project_container{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1C2025;
+    border-radius: 15px;
+    margin-bottom: 5%;
+}
+.project_image{
+    width: 100%;
+    height: 400px;
+    padding: 1rem; 
+}
+.project_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(75%);
+}
+.project_text{
+    padding: 2rem;
+    text-align: left;
+    align-items: left;
+}
+.project_text h1{
+    margin-bottom: 2rem;
+}
+.project_text p{
+    margin-bottom: 4rem;
+}

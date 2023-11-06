@@ -1,33 +1,37 @@
 import React, {useEffect} from "react";
 import styles from "./About.module.css";
 import pfp from "../../assets/Images/Banner1.png"
-import {animate, inView } from "motion";
-
+import {animate, inView} from "motion";
+import { itemData } from "./dataskills";
 const About = () => {
 
   useEffect(()=>{
     inView("#about",({target})=>{
       animate(target.querySelector("#blob"),
-      {opacity:[0,1]},
-      {delay:1, duration: 2, easing: [.22, .03, .26, 1]}
+      {opacity:[0,1], y:[50, 10, 0],},
+      {delay:0.7, duration: 1, easing:"ease-in-out"}
       ),
       animate(target.querySelector("#second"),
-      {opacity:[0,1], x:[-200, 0]},
-      {delay:2, duration: 0.7, easing: [.22, .03, .26, 1]}
+      {opacity:[0,1], y:[50, 0]},
+      {delay:0.7, duration: 1, easing:"ease-in-out"}
       ),
       animate(target.querySelector("#third"),
-      {opacity:[0,1], y:[-200, 0]},
-      {delay:2.7, duration: 0.3, easing: [.22, .5, .02, 1]}
+      {opacity:[0,1], y:[50, 0]},
+      {delay:0.7, duration: 1, easing:"ease-in-out"}
+      ),
+      animate(target.querySelector("#icons_container"),
+      {opacity:[0,1], y:[50, 0]},
+      {delay:0.7, duration: 1, easing:"ease-in-out"}
       )
-    });
+    }
+    );
   },[]);
-
   return (
     <>
       <section>
       <div className={styles.container} id="about">
-      <div className={styles.image} id="blob">
-        <div className={styles.blob}>
+      <div className={styles.image}>
+        <div className={styles.blob} id="blob">
               <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <clipPath id="clip-path">
@@ -66,6 +70,13 @@ const About = () => {
             combine these skills to create innovative solutions and drive
             progress in the tech landscape.
           </p>
+          <div className={styles.icons_container} id="icons_container">
+          {itemData.map((data)=>{
+                return(         
+                    <img src={data.imgSrc} className={styles.icons_bg}/>
+                );
+            })}
+          </div>
         </div>   
       </div>
       <span className={styles.blur} />

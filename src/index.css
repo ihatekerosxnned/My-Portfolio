@@ -5,7 +5,12 @@
   font-weight: 300;
 
   color: #f2f2f2;
-  background-color: #27282F;
+  background-color: #1C2025;
+
+  -webkit-font-smoothing: antialiased;
+
+  
+  
 }
 /* img{
   width: 100%;
@@ -15,3 +20,4 @@
 a{
   text-decoration: none;
 }
+

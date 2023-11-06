@@ -1,0 +1,21 @@
+.container{
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100%;
+    background: #1C2025;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden !important;
+}
+.text_container{
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+    font-size:2rem;
+    font-weight: 500;
+}

@@ -2,10 +2,11 @@
   width: 80%;
   margin: auto;
   display: flex;
+  z-index: -100;
 }
 .content {
   width: auto;
-  padding: 5% 0;
+  padding: 7.5% 0;
 }
 .content h4 {
   margin-bottom: 1rem;
