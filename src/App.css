@@ -1,56 +1,41 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
-.btn {
-  color: #f2f2f2;
-  background-color: #10637d;
-  font-weight: 300;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  min-width: 125px;
-  height: 45px;
-  font-size: 1rem;
-  padding: 0 1rem;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
 }
-.btn:hover {
-  background-color: #01546e;
-  color: #dedede;
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
 }
-h4 {
-  font-size: 1rem;
-  color: #f2f2f2;
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
-h1 {
-  color: #f2f2f2;
-  font-size: 3.5rem;
-  font-weight: 500;
-  line-height: 1;
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-p {
-  font-size: 1.25rem;
-  font-weight: 300;
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
-section {
-  padding: 10% 0;
+
+.card {
+  padding: 2em;
 }
-body {
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
-}
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #1c2025;
-}
-::-webkit-scrollbar-thumb {
-  background: #10637d;
-  border-radius: 6px;
+
+.read-the-docs {
+  color: #888;
 }

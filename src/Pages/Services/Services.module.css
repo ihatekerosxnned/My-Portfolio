@@ -1,0 +1,139 @@
+.servicesection {
+  background-color: #ed4b50;
+  height: 101vh;
+  display: flex;
+}
+/* SIDEWAYS TEXT HIHI */
+.servicesection h1 {
+  color: #282726;
+  font-size: 11rem;
+  writing-mode: vertical-lr;
+  text-align: center;
+  transform: rotate(180deg);
+  text-align: center;
+  margin: 3rem 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+}
+/* CARD CSS FOR CUTIE */
+.cardWrapper {
+  text-align: center;
+  margin: 1rem;
+  height: 450px;
+  display: flex;
+  width: 350px;
+  flex-direction: column;
+  border-radius: 12px;
+  background-color: #f8f7ef;
+  padding: 1.6rem;
+}
+.cardWrapper:nth-child(2) {
+  height: 550px;
+  width: 450px;
+  color: #ed4b50;
+  background-color: #282726;
+  color: #f8f7ef;
+  border-radius: 24px;
+}
+.cardWrapper p {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.cardTitle {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+  font-family: sans-serif;
+  font-size: 4.5rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.cardTitle span:first-child {
+  margin-top: 10px;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.cardTitle span:last-child {
+  align-self: flex-end;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+/* CARD LISTS AND LIST CUTIE */
+.lists {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 2rem;
+}
+.list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.lists hr {
+  height: 1rem;
+  border: none;
+  background-color: #282726;
+}
+hr.gold {
+  height: 1rem;
+  border: none;
+  background-color: #f8f7ef;
+}
+.list span {
+  border-radius: 50%;
+  border: 1px solid #282726;
+  background-color: #282726;
+  color: #f8f7ef;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list span svg {
+  height: 12px;
+  width: 12px;
+}
+/* MIDDLE CARD */
+.list2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+.list2 span {
+  border-radius: 50%;
+  border: 1px solid #f8f7ef;
+  background-color: #f8f7ef;
+  color: #282726;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list2 span svg {
+  height: 12px;
+  width: 12px;
+}
+
+.list p {
+  display: block;
+}

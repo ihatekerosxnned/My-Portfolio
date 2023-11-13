@@ -1,23 +1,60 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Rubik+Mono+One&display=swap");
 :root {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 400;
 
-  color: #f2f2f2;
-  background-color: #1C2025;
-
-  -webkit-font-smoothing: antialiased;
-
+  color: #282726;
+  background-color: #f8f7ef;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   
-  
+  cursor: default;
+
 }
-/* img{
-  width: 100%;
-  display: flex;
-} */
-
-a{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  font-weight: 500;
+  color: #282726;
   text-decoration: none;
 }
-
+h1 {
+  font-size: 25rem;
+  font-family: "Rubik Mono One", monospace;
+  display: block;
+  line-height: 0.8;
+  color: #ed4b50;
+}
+h2 {
+  font-size: 1.5rem;
+  color: #282726;
+  text-transform: uppercase;
+}
+button {
+  border-radius: 8px;
+  color: #e1ddd2;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #bfbbaf;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+button:hover {
+  background-color: #e1ddd2;
+}
+section {
+  height: 101vh;
+  scroll-snap-align: start; /* or center depending on your preference */
+  scroll-padding: 10px; /* Adjust this value as needed to control the padding between sections */
+}
+body{
+  scroll-behavior: smooth;
+}

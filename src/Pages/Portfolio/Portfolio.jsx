@@ -1,13 +1,8 @@
-import React from 'react';
-import styles from "./Portfolio.module.css";
+import React from 'react'
 
 const Portfolio = () => {
   return (
-    <section className={styles.section_portfolio}>
-      <div className={styles.container}>
-        rawr
-      </div>
-    </section>
+    <div>Portfolio</div>
   )
 }
 

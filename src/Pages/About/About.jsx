@@ -1,87 +1,97 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import styles from "./About.module.css";
-import pfp from "../../assets/Images/Banner1.png"
-import {animate, inView} from "motion";
-import { itemData } from "./dataskills";
-const About = () => {
+import { animate, inView, spring } from "motion";
 
-  useEffect(()=>{
-    inView("#about",({target})=>{
-      animate(target.querySelector("#blob"),
-      {opacity:[0,1], y:[50, 10, 0],},
-      {delay:0.7, duration: 1, easing:"ease-in-out"}
+import pfp from "../../assets/images/mainbg.png";
+
+const About = () => {
+  useEffect(() => {
+    inView("section", ({ target }) => {
+      animate(
+        target.querySelector(".text"),
+        { y: ["500px", 0], opacity: [0, 1] },
+        { delay: 0.5, duration: 1.3, easing: "ease-in-out" }
       ),
-      animate(target.querySelector("#second"),
-      {opacity:[0,1], y:[50, 0]},
-      {delay:0.7, duration: 1, easing:"ease-in-out"}
-      ),
-      animate(target.querySelector("#third"),
-      {opacity:[0,1], y:[50, 0]},
-      {delay:0.7, duration: 1, easing:"ease-in-out"}
-      ),
-      animate(target.querySelector("#icons_container"),
-      {opacity:[0,1], y:[50, 0]},
-      {delay:0.7, duration: 1, easing:"ease-in-out"}
-      )
-    }
-    );
-  },[]);
+        animate(
+          target.querySelector(".pfp"),
+          { x: ["-200px", 0], opacity: [0, 1] },
+          { delay: 0.5, easing: "ease-in-out", duration: 1.3 }
+        );
+    });
+  }, []);
+
   return (
-    <>
-      <section>
-      <div className={styles.container} id="about">
-      <div className={styles.image}>
-        <div className={styles.blob} id="blob">
-              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <clipPath id="clip-path">
-                    <path transform="translate(100 100)">
-                      <animate
-                        attributeName="d"
-                        dur="5000ms"
-                        repeatCount="indefinite"
-                        values="M44.3,-68.9C58.9,-59.5,73.2,-49.7,79.6,-36.2C86,-22.7,84.6,-5.4,82.5,12.2C80.5,29.7,77.9,47.5,68.5,60.6C59.1,73.6,42.8,82,26.5,83.9C10.2,85.8,-6.2,81.2,-22.8,76.8C-39.4,72.3,-56.4,67.9,-67.9,57.3C-79.4,46.7,-85.5,30,-86.7,13.3C-87.8,-3.5,-84.1,-20.1,-76.3,-33.9C-68.5,-47.7,-56.6,-58.6,-43.2,-68.5C-29.8,-78.4,-14.9,-87.3,0,-87.3C14.9,-87.2,29.7,-78.3,44.3,-68.9Z;
-          M45.7,-72.5C57.5,-63.5,64.2,-47.9,69.2,-32.8C74.3,-17.7,77.6,-3,76.8,11.9C76,26.8,71,42,62,55.5C53.1,69,40.1,80.8,24.5,87C8.9,93.2,-9.4,93.8,-25,88C-40.6,82.1,-53.4,69.7,-64.6,56.3C-75.9,42.8,-85.5,28.2,-89.3,11.9C-93.2,-4.4,-91.1,-22.5,-82.6,-36.3C-74.1,-50.1,-59.2,-59.4,-44.3,-67.1C-29.5,-74.7,-14.7,-80.6,1.1,-82.3C16.9,-84,33.8,-81.5,45.7,-72.5Z;
-          M41.9,-63.1C56.3,-56,71.3,-47.7,78.9,-34.9C86.5,-22.1,86.7,-4.8,84.9,12.7C83.1,30.1,79.2,47.7,69.1,60.3C58.9,73,42.4,80.6,26.2,82C10,83.5,-5.8,78.7,-20.2,72.7C-34.6,66.7,-47.5,59.5,-59.1,49.4C-70.7,39.3,-81.1,26.2,-82.8,12.1C-84.6,-2,-77.7,-17.2,-70.3,-31.5C-62.8,-45.8,-54.8,-59.3,-43,-67.5C-31.1,-75.7,-15.6,-78.7,-0.9,-77.3C13.8,-75.9,27.6,-70.1,41.9,-63.1Z;
-          M44.3,-68.9C58.9,-59.5,73.2,-49.7,79.6,-36.2C86,-22.7,84.6,-5.4,82.5,12.2C80.5,29.7,77.9,47.5,68.5,60.6C59.1,73.6,42.8,82,26.5,83.9C10.2,85.8,-6.2,81.2,-22.8,76.8C-39.4,72.3,-56.4,67.9,-67.9,57.3C-79.4,46.7,-85.5,30,-86.7,13.3C-87.8,-3.5,-84.1,-20.1,-76.3,-33.9C-68.5,-47.7,-56.6,-58.6,-43.2,-68.5C-29.8,-78.4,-14.9,-87.3,0,-87.3C14.9,-87.2,29.7,-78.3,44.3,-68.9Z"
-                      />
-                    </path>
-                  </clipPath>
-                </defs>
-                <image
-                  x="0"
-                  y="0"
-                  width="135%"
-                  height="100%"
-                  xlinkHref={pfp}
-                  clipPath="url(#clip-path)"
-                />
-              </svg>
-            </div>
-        </div>
-        <div className={styles.content}>
-          <h1 id="second">About</h1>
-          <p id="third">
-            I'm a dedicated IT student with a passion for innovation and
-            problem-solving. I thrive in the ever-changing world of technology,
-            where I believe the key to shaping the future resides. In my
-            journey, I've honed skills in web development, database management,
-            and system architecture. Welcome to my digital world, where I
-            combine these skills to create innovative solutions and drive
-            progress in the tech landscape.
-          </p>
-          <div className={styles.icons_container} id="icons_container">
-          {itemData.map((data)=>{
-                return(         
-                    <img src={data.imgSrc} className={styles.icons_bg}/>
-                );
-            })}
+    <section className={styles.aboutsection}>
+      <div className={styles.container}>
+        <div className={styles.wrapperContent}>
+          <div className={`pfp ${styles.wrapperPhoto}`}>
+            <img src={pfp} alt="" />
           </div>
-        </div>   
+        </div>
+        <div className={styles.wrapper}>
+          <div className={`text ${styles.text}`}>
+            <h1>Ola Bogo!</h1>
+            <p>
+              I'm a dedicated IT student with a passion for innovation and
+              problem-solving. I thrive in the ever-changing world of
+              technology, where I believe the key to shaping the future resides.
+              In my journey, I've honed skills in web development, database
+              management, and system architecture. Welcome to my digital world,
+              where I combine these skills to create innovative solutions and
+              drive progress in the tech landscape.
+            </p>
+            <hr />
+            <h2>Buenaflor, FJ Austin G.</h2>
+            <h2>La Consolacion College - Bacolod</h2>
+            <h2>Bachelor of Science in Information Technology</h2>
+            <div className={styles.cardWrapper}>
+              <div className={styles.card}>
+                <a className={styles.social_link1}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#282726"
+                    height="1em"
+                    viewBox="0 0 496 512"
+                  >
+                    <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+                  </svg>
+                </a>
+                <a className={styles.social_link2}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 448 512"
+                    fill="#282726"
+                  >
+                    <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+                  </svg>{" "}
+                </a>
+                <a className={styles.social_link3}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 576 512"
+                    fill="#282726"
+                  >
+                    <path d="M232 237.2c31.8-15.2 48.4-38.2 48.4-74 0-70.6-52.6-87.8-113.3-87.8H0v354.4h171.8c64.4 0 124.9-30.9 124.9-102.9 0-44.5-21.1-77.4-64.7-89.7zM77.9 135.9H151c28.1 0 53.4 7.9 53.4 40.5 0 30.1-19.7 42.2-47.5 42.2h-79v-82.7zm83.3 233.7H77.9V272h84.9c34.3 0 56 14.3 56 50.6 0 35.8-25.9 47-57.6 47zm358.5-240.7H376V94h143.7v34.9zM576 305.2c0-75.9-44.4-139.2-124.9-139.2-78.2 0-131.3 58.8-131.3 135.8 0 79.9 50.3 134.7 131.3 134.7 61.3 0 101-27.6 120.1-86.3H509c-6.7 21.9-34.3 33.5-55.7 33.5-41.3 0-63-24.2-63-65.3h185.1c.3-4.2.6-8.7.6-13.2zM390.4 274c2.3-33.7 24.7-54.8 58.5-54.8 35.4 0 53.2 20.8 56.2 54.8H390.4z"></path>
+                  </svg>
+                </a>
+                <a className={styles.social_link4}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 512 512"
+                    fill="#282726"
+                  >
+                    <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <span className={styles.blur} />
-      </section>
-    </>
+    </section>
   );
 };
 

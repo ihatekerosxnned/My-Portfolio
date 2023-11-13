@@ -1,0 +1,34 @@
+.skillsection {
+  background-color: #ed4b50;
+  height: 101vh;
+}
+.skillsection .text {
+  display: flex;
+}
+.skillsection h2 {
+  width: 5%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  font-size: 11rem;
+  color: #282726;
+}
+.container {
+    position: relative;
+    overflow: hidden;
+    padding: 0 5%;
+    text-align: justify;
+    font-size: 3rem;
+    font-weight: bold;
+    
+}
+.container a{
+    font-size: 4rem;
+    font-weight: bold;
+    color: #D9373C;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+.container a:hover{
+    color: #F8F7EF;
+}
